@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GIVE US MONEY</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            font-family: serif; /* Classic default look */
+        }
+        .container {
+            border: 1px solid black;
+            padding: 30px;
+        }
+        button, input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Official Donation Portal</h1>
+        <p>Please select an amount to help our very important cause.</p>
+
+        <div style="margin-bottom: 20px;">
+            <button onclick="setAmount('45,000,000')">$45 Million</button>
+            <button onclick="setAmount('1,000,000,000')">$1 Billion</button>
+            <button onclick="setAmount('Your Firstborn')">Firstborn Child</button>
+            <button onclick="setAmount('The Moon')">The Moon (Physical)</button>
+        </div>
+
+        <label for="amount">Custom Amount:</label><br>
+        <input type="text" id="amount" placeholder="Your entire life savings and a kidney">
+        
+        <br><br>
+        
+        <button onclick="donate()">Send Payment Now</button>
+
+        <p id="thanks" style="color: green; font-weight: bold; display: none;"></p>
+    </div>
+
+    <script>
+        function setAmount(val) {
+            document.getElementById('amount').value = val;
+        }
+
+        function donate() {
+            const inputField = document.getElementById('amount');
+            let val = inputField.value.trim();
+            const msg = document.getElementById('thanks');
+            
+            if (!val) {
+                alert("Error: Please enter an amount or we can't buy our island.");
+                return;
+            }
+
+            // Remove commas for the check, then see if it's a pure number
+            let cleanVal = val.replace(/,/g, '');
+            let displayVal = val;
+
+            if (!isNaN(cleanVal) && cleanVal !== "") {
+                displayVal = val + " dollars";
+            }
+
+            msg.innerText = "Success! Thank you for donating " + displayVal + ". We have already started spending it.";
+            msg.style.display = "block";
+            inputField.value = "";
+        }
+    </script>
+
+</body>
+</html>
