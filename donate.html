@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
     <title>GIVE US MONEY</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            font-family: serif; /* Classic default look */
-        }
-        .container {
-            border: 1px solid black;
-            padding: 30px;
-        }
-        button, input {
-            margin: 5px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
 
     <div class="container">
@@ -37,10 +28,10 @@
         </div>
 
         <label for="amount">Custom Amount:</label><br>
-        <input type="text" id="amount" placeholder="Your entire life savings and a kidney">
-        
+        <input type="text" id="amount" placeholder="Your entire life savings">
+
         <br><br>
-        
+
         <button onclick="donate()">Send Payment Now</button>
 
         <p id="thanks" style="color: green; font-weight: bold; display: none;"></p>
@@ -55,7 +46,7 @@
             const inputField = document.getElementById('amount');
             let val = inputField.value.trim();
             const msg = document.getElementById('thanks');
-            
+
             if (!val) {
                 alert("Error: Please enter an amount or we can't buy our island.");
                 return;
@@ -68,6 +59,10 @@
             if (!isNaN(cleanVal) && cleanVal !== "") {
                 displayVal = val + " dollars";
             }
+            else {
+                displayVal = displayVal.toLowerCase();
+                displayVal = displayVal.replaceAll("my", "your");
+            }
 
             msg.innerText = "Success! Thank you for donating " + displayVal + ". We have already started spending it.";
             msg.style.display = "block";
@@ -76,4 +71,5 @@
     </script>
 
 </body>
+
 </html>

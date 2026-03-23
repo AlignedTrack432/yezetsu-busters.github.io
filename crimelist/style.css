@@ -1,0 +1,53 @@
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #ffffffcc;
+            border: 1px solid #e0d9d9;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f3ebeb;
+            font-family: 'Source Serif 4', serif;
+            font-weight: 300;
+            color: #222;
+        }
+
+        ul {
+            font-family: 'Source Serif 4', serif;
+            font-weight: 500;
+            color: #222;
+            margin-bottom: 0.65rem;
+        }
+
+        h1 {
+            font-weight: 600;
+            margin-top: 0;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 400;
+            margin-bottom: 0.65rem;
+        }
+
+        p {
+            font-weight: 500;
+            margin-bottom: 0.65rem;
+        }
+
+        button,
+        input {
+            margin: 5px;
+            font-family: 'Source Serif 4', serif;
+            font-weight: 400;
+            color: #222;
+        }
