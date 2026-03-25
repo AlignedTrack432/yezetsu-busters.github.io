@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,95 +8,111 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
 
-<div class="topnav">
-    <a  href="index.html">Home</a>
-    <a href="about.html" >About</a>
-    <a href="apply.html">Apply</a>
-    <a href="login.html" class="active">Login</a>
-    <img src="pudding.webp" alt="YZB logo" width=40 height=40 style="float:right; margin-top: 5px; margin-right: 10px; border-radius: 50%;">
-</div>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="apply.html">Apply</a>
+        <a href="login.html" class="active">Login</a>
+        <img src="pudding.webp" alt="YZB logo" width=40 height=40
+            style="float:right; margin-top: 5px; margin-right: 10px; border-radius: 50%;">
+    </div>
 
-<div class="layout">
+    <div class="layout">
 
-    <aside class="sidebar sidebar-left">
-        <h2>Latest posts</h2>
-        <div class="article-preview">
-            <a href="posts/post1.html">Yezetsu times out an innocent viewer, goes on a violent rampage, and appoints a new mod</a>
-            <small>Mar 22, 2026</small>
-        </div>
-        <div class="article-preview">
-            <a href="posts/litter.html">Yezetsu litters on the sidewalk</a>
-            <small>Mar 20, 2026</small>
-        </div>
-        <div class="article-preview">
-            <a href="posts/tip.html">Yezetsu only leaves a 5% tip</a>
-            <small>Mar 18, 2026</small>
-        </div>
-    </aside>
+        <aside class="sidebar sidebar-left">
+            <h2>Latest posts</h2>
+            <div class="article-preview">
+                <a href="posts/post1.html">Yezetsu times out an innocent viewer, goes on a violent rampage, and appoints
+                    a new mod</a>
+                <small>Mar 22, 2026</small>
+            </div>
+            <div class="article-preview">
+                <a href="posts/litter.html">Yezetsu litters on the sidewalk</a>
+                <small>Mar 20, 2026</small>
+            </div>
+            <div class="article-preview">
+                <a href="posts/tip.html">Yezetsu only leaves a 5% tip</a>
+                <small>Mar 18, 2026</small>
+            </div>
+        </aside>
 
-    <main class="content">
-        <h1>YZB Admin Login</h1>
-        <h3>Note: Username is NOT "admin" and password is NOT "password"</h3>
-        <form id="redirectForm">
-        <label for="field1">Username:</label>
-        <input type="text" id="field1" name="field1" required>
-        <br><br>
-        <label for="field2">Password:</label>
-        <input type="password" id="field2" name="field2" required>
-        <br><br>
-        <button type="submit">Login</button>
-    </form>
+        <main class="content">
+            <h1>YZB Admin Login</h1>
+            <h3>Note: Username is NOT "admin" and password is NOT "password"</h3>
+            <form id="redirectForm">
+                <label for="field1">Username:</label>
+                <input type="text" id="field1" name="field1" required>
+                <br><br>
+                <label for="field2">Password:</label>
+                <input type="password" id="field2" name="field2" required>
+                <br><br>
+                <button type="submit">Login</button>
+            </form>
 
-    <script>
-        document.getElementById('redirectForm').addEventListener('submit', function(event) {
-            // Prevent the form from refreshing the page
-            event.preventDefault();
+            <script>
+                document.getElementById('redirectForm').addEventListener('submit', function (event) {
+                    // Prevent the form from refreshing the page
+                    event.preventDefault();
 
-            // Get the values from the inputs
-            const val1 = document.getElementById('field1').value;
-            const val2 = document.getElementById('field2').value;
+                    // Get the values from the inputs
+                    const val1 = document.getElementById('field1').value;
+                    const val2 = document.getElementById('field2').value;
 
-            // Define your "certain values"
-            const secret1 = "admin";
-            const secret2 = "password";
+                    // Define your "certain values"
+                    const secret1 = "admin";
+                    const secret2 = "password";
 
-            // Check if they match
-            if (val1 === secret1 && val2 === secret2) {
-                // Redirect to the new page
-                window.location.href = "admin/index.html";
-            } else {
-                alert("Incorrect credentials. Try again.");
-            }
-        });
-    </script>
-    </main>
+                    // Check if they match
+                    if (val1 === secret1 && val2 === secret2) {
+                        // Redirect to the new page
+                        window.location.href = "admin/index.html";
+                    } else {
+                        alert("Incorrect credentials. Try again.");
+                    }
+                });
+            </script>
+        </main>
 
-    <aside class="sidebar sidebar-right">
-        <h2>Important Links</h2>
-        <div class="article-preview">
-            <a href="crimes.html">List of Yezetsu's Crimes</a>
-            <small>Oh so many crimes!</small>
-        </div>
-        <div class="article-preview">
-            <a href="donate.html">Donate to the cause!</a>
-            <small>We need money!</small>
-        </div>
-        <div class="article-preview">
-            <a href="manifesto.html">Manifesto</a>
-            <small>The <i>do</i>s and <i>don't</i>s of the YZB</small>
-        </div>
-    </aside>
+        <aside class="sidebar sidebar-right">
+            <h2>Important Links</h2>
+            <div class="article-preview">
+                <a href="crimes.html">List of Yezetsu's Crimes</a>
+                <small>Oh so many crimes!</small>
+            </div>
+            <div class="article-preview">
+                <a href="donate.html">Donate to the cause!</a>
+                <small>We need money!</small>
+            </div>
+            <div class="article-preview">
+                <a href="manifesto.html">Manifesto</a>
+                <small>The <i>do</i>s and <i>don't</i>s of the YZB</small>
+            </div>
 
-</div>
+            <div class="article-preview">
+                <a href="translator.html">Translator</a>
+                <small>Discover what Yezetsu really means</small>
+            </div>
 
- <script src="points.js" defer></script>
+            <div class="article-preview">
+                <a href="testimonies.html">Testimonies</a>
+                <small>Testimonies against Yezetsu's crimes</small>
+            </div>
+            </aside>
+
+    </div>
+
+    <script src="points.js" defer></script>
     <script src="links.js" defer></script>
 
 </body>
+
 </html>
