@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+        rel="stylesheet">
 
     <style>
         body {
@@ -18,10 +21,24 @@
             color: #222;
         }
 
-        h1 { font-weight: 600; margin-top: 0; }
-        h2, h3, h4, h5, h6 { font-weight: 500; margin-bottom: 0.65rem; }
+        h1 {
+            font-weight: 600;
+            margin-top: 0;
+        }
 
-        p { font-weight: 500; margin-bottom: 0.65rem; }
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 500;
+            margin-bottom: 0.65rem;
+        }
+
+        p {
+            font-weight: 500;
+            margin-bottom: 0.65rem;
+        }
 
         .topnav {
             background-color: #333;
@@ -42,9 +59,15 @@
             font-weight: 400
         }
 
-        .topnav a:hover { background-color: #ddd; color: black; }
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
 
-        .topnav a.active { background-color: #98a29e; color: white; }
+        .topnav a.active {
+            background-color: #98a29e;
+            color: white;
+        }
 
         .layout {
             display: grid;
@@ -62,7 +85,7 @@
             border: 1px solid #e0d9d9;
             border-radius: 12px;
             padding: 1rem;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 6rem;
             max-height: calc(100vh - 8rem);
@@ -79,10 +102,13 @@
         .article-preview {
             margin-bottom: 0.75rem;
             padding-bottom: 0.65rem;
-            border-bottom: 1px solid rgba(0,0,0,.08);
+            border-bottom: 1px solid rgba(0, 0, 0, .08);
         }
 
-        .article-preview:last-child { border-bottom: none; margin-bottom: 0; }
+        .article-preview:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
 
         .article-preview a {
             color: #0c62cd;
@@ -90,7 +116,9 @@
             font-weight: 600;
         }
 
-        .article-preview a:hover { text-decoration: underline; }
+        .article-preview a:hover {
+            text-decoration: underline;
+        }
 
         .article-preview small {
             color: #666;
@@ -98,7 +126,10 @@
             margin-top: 0.25rem;
         }
 
-        .content p, .content li { line-height: 1.6; }
+        .content p,
+        .content li {
+            line-height: 1.6;
+        }
 
         .full-width-placeholder {
             text-align: center;
@@ -108,73 +139,99 @@
         }
 
         @media (max-width: 1100px) {
-            .layout { grid-template-columns: 1fr; }
-            .sidebar { display: none; position: static; max-height: none; }
-            .content { padding: 1.5rem 0.85rem; }
-            .layout { margin: 1rem auto; padding: 0 0.75rem 1rem; }
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+                position: static;
+                max-height: none;
+            }
+
+            .content {
+                padding: 1.5rem 0.85rem;
+            }
+
+            .layout {
+                margin: 1rem auto;
+                padding: 0 0.75rem 1rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<div class="topnav">
-    <a class="active" href="index.html">Home</a>
-    <a href="about.html" >About</a>
-    <a href="apply.html">Apply</a>
-    <img src="pudding.webp" alt="YZB logo" width=40 height=40 style="float:right; margin-top: 5px; margin-right: 10px; border-radius: 50%;">
-</div>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="apply.html">Apply</a>
+        <a href="login.html">Login</a>
+        <img src="pudding.webp" alt="YZB logo" width=40 height=40
+            style="float:right; margin-top: 5px; margin-right: 10px; border-radius: 50%;">
+    </div>
 
-<div class="layout">
+    <div class="layout">
 
-    <aside class="sidebar sidebar-left">
-        <h2>Latest posts</h2>
-        <div class="article-preview">
-            <a href="posts/post1.html">Yezetsu times out an innocent viewer, goes on a violent rampage, and appoints a new mod</a>
-            <small>Mar 22, 2026</small>
-        </div>
-        <div class="article-preview">
-            <a href="posts/litter.html">Yezetsu litters on the sidewalk</a>
-            <small>Mar 20, 2026</small>
-        </div>
-        <div class="article-preview">
-            <a href="posts/tip.html">Yezetsu only leaves a 5% tip</a>
-            <small>Mar 18, 2026</small>
-        </div>
-    </aside>
+        <aside class="sidebar sidebar-left">
+            <h2>Latest posts</h2>
+            <div class="article-preview">
+                <a href="posts/post1.html">Yezetsu times out an innocent viewer, goes on a violent rampage, and appoints
+                    a new mod</a>
+                <small>Mar 22, 2026</small>
+            </div>
+            <div class="article-preview">
+                <a href="posts/litter.html">Yezetsu litters on the sidewalk</a>
+                <small>Mar 20, 2026</small>
+            </div>
+            <div class="article-preview">
+                <a href="posts/tip.html">Yezetsu only leaves a 5% tip</a>
+                <small>Mar 18, 2026</small>
+            </div>
+        </aside>
 
-    <main class="content">
-        <h1>YOU ARE NOT FREE</h1>
+        <main class="content">
+            <div id="heading">
+                <h1>YOU ARE NOT FREE</h1>
+            </div>
 
-        <p>Yezetsu, a popular VTuber, is discriminating against his viewers. We are the YZB: Yezetsu Busters. Viewers who deserve better.</p>
-        <p>Our leader is the incredible <a href="https://www.twitch.tv/just__pudding" target="_blank" rel="noopener">Just__Pudding</a>. He is the founder of the YZB and has been tirelessly working to expose Yezetsu's discrimination and fight for the rights of his viewers.</p>
+            <div id="bodyText">
+                <p>Yezetsu, a popular VTuber, is discriminating against his viewers. We are the YZB: Yezetsu Busters.
+                    Viewers who deserve better.</p>
+                <p>Our leader is the incredible <a href="https://www.twitch.tv/just__pudding" target="_blank"
+                        rel="noopener">Just__Pudding</a>. He is the founder of the YZB and has been tirelessly working
+                    to expose Yezetsu's discrimination and fight for the rights of his viewers.</p>
 
-        <p>Join us in our mission to hold Yezetsu accountable and create a more inclusive and welcoming community for all VTuber fans.</p>
+                <p>Join us in our mission to hold Yezetsu accountable and create a more inclusive and welcoming
+                    community for all VTuber fans.</p>
 
-        <p>You can read more about our cause and operations on our website.</p>
+                <p>You can read more about our cause and operations on our website.</p>
+            </div>
+            <p id="pointsOwed">Points owed by Yezetsu: 0</p>
+        </main>
 
-        <p id="pointsOwed">Points owed by Yezetsu: 0</p>
-    </main>
+        <aside class="sidebar sidebar-right">
+            <h2>Important Links</h2>
+            <div class="article-preview">
+                <a href="crimes.html">List of Yezetsu's Crimes</a>
+                <small>Oh so many crimes!</small>
+            </div>
+            <div class="article-preview">
+                <a href="donate.html">Donate to the cause!</a>
+                <small>We need money!</small>
+            </div>
+            <div class="article-preview">
+                <a href="manifesto.html">Manifesto</a>
+                <small>The <i>do</i>s and <i>don't</i>s of the YZB</small>
+            </div>
+        </aside>
 
-    <aside class="sidebar sidebar-right">
-        <h2>Important Links</h2>
-        <div class="article-preview">
-            <a href="crimes.html">List of Yezetsu's Crimes</a>
-            <small>Oh so many crimes!</small>
-        </div>
-        <div class="article-preview">
-            <a href="donate.html">Donate to the cause!</a>
-            <small>We need money!</small>
-        </div>
-        <div class="article-preview">
-            <a href="manifesto.html">Manifesto</a>
-            <small>The <i>do</i>s and <i>don't</i>s of the YZB</small>
-        </div>
-    </aside>
+    </div>
 
-</div>
-
- <script src="points.js" defer></script>
-    <script src="links.js" defer></script>
+    <script src="points.js" defer></script>
+    <script src="load_front_page.js" defer></script>
 
 </body>
+
 </html>

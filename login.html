@@ -17,7 +17,7 @@
     <a  href="index.html">Home</a>
     <a href="about.html" >About</a>
     <a href="apply.html">Apply</a>
-    <a href="login.html">Login</a>
+    <a href="login.html" class="active">Login</a>
     <img src="pudding.webp" alt="YZB logo" width=40 height=40 style="float:right; margin-top: 5px; margin-right: 10px; border-radius: 50%;">
 </div>
 
@@ -40,9 +40,40 @@
     </aside>
 
     <main class="content">
-                <h1>List of Yezetsu's Crimes</h1>
-        <p>Yezetsu has commited many crimes, and here is a list of them:</p>
-    <ul> <li><a target="_blank" href=crimelist/timeout.html>Yezetsu timed out an innocent viewer</a></li> <li><a target="_blank" href=crimelist/hatecrime.html>Yezetsu commited a hate crime against our dear leader</a></li> <li><a target="_blank" href=crimelist/puppiesandorphans.html>Yezetsu kicks puppies and orphans</a></li> <li><a target="_blank" href=crimelist/stealing.html>Yezetsu steals from the elderly</a></li> <li><a target="_blank" href=crimelist/discord.html>Yezetsu refuses to give out Discord invite links</a></li> <li><a target="_blank" href=crimelist/charity.html>Yezetsu doesn't donate to charity</a></li> <li> <a target="_blank" href=crimelist/christmas.html>Yezetsu stole Christmas</a></li> <li><a target="_blank" href=crimelist/terrible.html>Yezetsu is a terrible person</a></li> <li><a target="_blank" href=crimelist/topgear.html>Yezetsu has NOT WATCHED Top Gear</a></li></ul>
+        <h1>Login</h1>
+        <h3>Note: Username is NOT "admin" and password is NOT "password"</h3>
+        <form id="redirectForm">
+        <label for="field1">Username:</label>
+        <input type="text" id="field1" name="field1" required>
+        <br><br>
+        <label for="field2">Password:</label>
+        <input type="password" id="field2" name="field2" required>
+        <br><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        document.getElementById('redirectForm').addEventListener('submit', function(event) {
+            // Prevent the form from refreshing the page
+            event.preventDefault();
+
+            // Get the values from the inputs
+            const val1 = document.getElementById('field1').value;
+            const val2 = document.getElementById('field2').value;
+
+            // Define your "certain values"
+            const secret1 = "admin";
+            const secret2 = "password";
+
+            // Check if they match
+            if (val1 === secret1 && val2 === secret2) {
+                // Redirect to the new page
+                window.location.href = "admin/index.html";
+            } else {
+                alert("Incorrect credentials. Try again.");
+            }
+        });
+    </script>
     </main>
 
     <aside class="sidebar sidebar-right">

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editor</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+<div style="align-items: center; display: flex; flex-direction: column; justify-content: center; height: 100vh;">
+    <h2>Front Page Editor</h2>
+
+    <form id="cookieForm">
+        <div class="form-group">
+            <label for="heading">Heading text:</label>
+            <textarea id="heading" rows="2" cols="30">YOU ARE NOT FREE</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="bodyText" >Body Text:</label>
+            <textarea id="bodyText" rows="10" cols="90">Yezetsu, a popular VTuber, is discriminating against his viewers. We are the YZB: Yezetsu Busters. Viewers who deserve better.
+
+Our leader is the incredible Just__Pudding. He is the founder of the YZB and has been tirelessly working to expose Yezetsu's discrimination and fight for the rights of his viewers.
+
+Join us in our mission to hold Yezetsu accountable and create a more inclusive and welcoming community for all VTuber fans.
+
+You can read more about our cause and operations on our website.</textarea>
+        </div>
+
+        <button type="submit">Save</button>
+    </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('cookieForm');
+
+        document.cookie.split(";").forEach(function (c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // encodeURIComponent handles the new lines safely for the cookie string
+            const val1 = encodeURIComponent(document.getElementById('heading').value);
+            const val2 = encodeURIComponent(document.getElementById('bodyText').value);
+
+            document.cookie = `front_page=${val1}|${val2}; path=/; max-age=86400`;
+            alert('Saved!');
+        });
+    </script>
+
+</body>
+
+</html>
